@@ -7,8 +7,9 @@ public class HomePage extends BasePage {
 
     private WebDriver driver;
 
-    private By formAuthLink = By.linkText("Login");
+    private By formAuthLink = By.linkText("Form Authentication");
     private By shifContLink = By.linkText("Shifting Content");
+    private By addElementsLink = By.linkText("Add/Remove Elements");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -22,6 +23,11 @@ public class HomePage extends BasePage {
     public ExamplePage clickShifContLink() {
         driver.findElement(shifContLink).click();
         return new ExamplePage(driver);
+    }
+
+    public AddElementsPage clickAddElementsLink() {
+        driver.findElement(addElementsLink).click();
+        return new AddElementsPage(driver);
     }
 
 }
