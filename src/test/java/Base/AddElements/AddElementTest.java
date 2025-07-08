@@ -1,4 +1,4 @@
-package Base;
+package Base.AddElements;
 
 import java.util.List;
 
@@ -8,6 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.selenium.pages.AddElementsPage;
+
+import Base.BaseTests;
 
 public class AddElementTest extends BaseTests {
 

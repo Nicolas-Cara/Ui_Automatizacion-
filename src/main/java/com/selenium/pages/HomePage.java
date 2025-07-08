@@ -10,9 +10,16 @@ public class HomePage extends BasePage {
     private By formAuthLink = By.linkText("Form Authentication");
     private By shifContLink = By.linkText("Shifting Content");
     private By addElementsLink = By.linkText("Add/Remove Elements");
+    private By forgotPasswordLink = By.linkText("Forgot Password");
+    private By hoversPageLink = By.linkText("Hovers");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public HoversPage clickHovers() {
+        driver.findElement(hoversPageLink).click();
+        return new HoversPage(driver);
     }
 
     public LoginPage clickFormAuthLink() {
@@ -28,6 +35,11 @@ public class HomePage extends BasePage {
     public AddElementsPage clickAddElementsLink() {
         driver.findElement(addElementsLink).click();
         return new AddElementsPage(driver);
+    }
+
+    public ForgotPasswordPage clickForgotPasswordLink() {
+        driver.findElement(forgotPasswordLink).click();
+        return new ForgotPasswordPage(driver);
     }
 
 }
