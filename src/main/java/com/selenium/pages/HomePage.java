@@ -12,6 +12,7 @@ public class HomePage extends BasePage {
     private By addElementsLink = By.linkText("Add/Remove Elements");
     private By forgotPasswordLink = By.linkText("Forgot Password");
     private By hoversPageLink = By.linkText("Hovers");
+    private By alertPageLink = By.linkText("JavaScript Alerts");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -40,6 +41,11 @@ public class HomePage extends BasePage {
     public ForgotPasswordPage clickForgotPasswordLink() {
         driver.findElement(forgotPasswordLink).click();
         return new ForgotPasswordPage(driver);
+    }
+
+    public AlertPage clickAlertPageLink() {
+        driver.findElement(alertPageLink).click();
+        return new AlertPage(driver);
     }
 
 }
