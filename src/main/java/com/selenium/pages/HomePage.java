@@ -13,6 +13,7 @@ public class HomePage extends BasePage {
     private By forgotPasswordLink = By.linkText("Forgot Password");
     private By hoversPageLink = By.linkText("Hovers");
     private By alertPageLink = By.linkText("JavaScript Alerts");
+    private By fileUploadLink = By.linkText("File Upload");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -46,6 +47,11 @@ public class HomePage extends BasePage {
     public AlertPage clickAlertPageLink() {
         driver.findElement(alertPageLink).click();
         return new AlertPage(driver);
+    }
+
+    public FileUploadPage clickFileUploadLink() {
+        driver.findElement(fileUploadLink).click();
+        return new FileUploadPage(driver);
     }
 
 }
