@@ -14,6 +14,7 @@ public class HomePage extends BasePage {
     private By hoversPageLink = By.linkText("Hovers");
     private By alertPageLink = By.linkText("JavaScript Alerts");
     private By fileUploadLink = By.linkText("File Upload");
+    private By entryAdLink = By.linkText("Entry Ad");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -54,4 +55,8 @@ public class HomePage extends BasePage {
         return new FileUploadPage(driver);
     }
 
+    public EntryAdPage clickEntryAdLink() {
+        driver.findElement(entryAdLink).click();
+        return new EntryAdPage(driver);
+    }
 }
